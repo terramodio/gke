@@ -6,7 +6,7 @@ variable use-ip-aliases { default = true }
 
 variable machine-type { default = "n1-standard-1" }
 variable node-count { default = 1 }
-variable min-node-cound { default = 1 }
+variable min-node-count { default = 1 }
 variable max-node-count { default = 3 }
 variable oauth-scopes {
   default = [

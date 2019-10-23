@@ -1,4 +1,6 @@
 resource google_container_cluster cluster {
+  provider = google-beta
+
   cluster_autoscaling {
     enabled = true
     resource_limits {
@@ -27,7 +29,7 @@ resource google_container_cluster cluster {
 resource google_container_node_pool primary-pool {
   autoscaling {
     max_node_count = var.max-node-count
-    min_node_count = var.min-node-cound
+    min_node_count = var.min-node-count
   }
   cluster = google_container_cluster.cluster.name
   location = var.region
